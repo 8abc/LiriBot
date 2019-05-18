@@ -1,3 +1,11 @@
-LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a _Language_ Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data.
+#Liri Bot
 
-LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for movies.
+**Built With:** Node.js, Javascript
+**Packages Used:** require, axios, node-spotify-api, fs, moment, dotenv, request
+**API:** Spotify, OMDB, Bandsintown
+
+LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a _Language_ Interpretation and Recognition Interface. LIRI is a command line node app that takes in parameters and gives you back data.
+
+| Commands     | Functions                                                                                                            |
+| ------------ | -------------------------------------------------------------------------------------------------------------------- |
+| spotify-this | uses the Spotify API by taking the song name from the user and returns the artis, song name, preview link and album. |
