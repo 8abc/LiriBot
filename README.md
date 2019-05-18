@@ -26,7 +26,7 @@ do-what-it-says | uses the built in readFile() method to access data from a .txt
 
 3. concert-this
 
-<img width="377" alt="image3" src="https://user-images.githubusercontent.com/46228172/57966751-0101b100-790b-11e9-8f81-f8c2caa6274e.png">
+Working on it
 
 4. do-what-it-says
 <img width="463" alt="image4" src="https://user-images.githubusercontent.com/46228172/57966753-03fca180-790b-11e9-9c78-aa9f360f75a3.png">
