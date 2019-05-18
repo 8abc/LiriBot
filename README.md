@@ -13,6 +13,20 @@ movie-this| uses the OMDB API by taking the movie name from the user and returni
 concert-this | uses the Bandsintown API by taking the artist name from user and returning the venue name, location, date and time.
 do-what-it-says | uses the built in readFile() method to access data from a .txt file and return its information.
 
-***How it Works:***
+### How it Works ###
 
-![Image of spotify-this](./image1.png)
+
+1. spotify-this
+
+<img width="851" alt="image1" src="https://user-images.githubusercontent.com/46228172/57966747-fc3cfd00-790a-11e9-82ae-540fd1cba070.png">
+
+2. movie-this
+
+<img width="1413" alt="image2" src="https://user-images.githubusercontent.com/46228172/57966749-ff37ed80-790a-11e9-88f5-a1e92e698754.png">
+
+3. concert-this
+
+<img width="377" alt="image3" src="https://user-images.githubusercontent.com/46228172/57966751-0101b100-790b-11e9-8f81-f8c2caa6274e.png">
+
+4. do-what-it-says
+<img width="463" alt="image4" src="https://user-images.githubusercontent.com/46228172/57966753-03fca180-790b-11e9-9c78-aa9f360f75a3.png">
