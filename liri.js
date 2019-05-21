@@ -110,10 +110,12 @@ function doWhatitsays() {
     // If the code experiences any errors it will log the error to the console.
     if (error) throw error;
     // Then split it by commas (to make it more readable)
-    var dataArr = data.split(",");
+    var random = data.split(",");
     // // We will then re-display the content as an array for later use.
     // console.log(dataArr);
     return console.log(data);
+    userCommands(raondm[0], random[1]);
+    console.lot("test");
   });
 }
 
