@@ -15,11 +15,13 @@ var spotify = new Spotify({
   id: keys.id,
   secret: keys.secret
 });
-var getArtist = function(artist) {
-  return artist.name;
-};
+
 // create a function to getSpotify passing in songName as the arguement
 var getSpotify = function(songName) {
+  //default will search "The Sign"
+  if (!songName) {
+    songName = "The Sign";
+  }
   // query will grab whats in songName to search
   spotify.search({ type: "track", query: songName }, function(err, data) {
     if (err) {
@@ -29,7 +31,7 @@ var getSpotify = function(songName) {
     // looping through songs and pulling out the attributes we want to display
     console.log("------------------------------------");
     // The artist name
-    console.log("Artist: " + songs[0].artists.map(getArtist));
+    console.log("Artist: " + songs[0].artists[0].name);
     // The song name
     console.log("Song name: " + songs[0].name);
     // preview link from spotify
@@ -38,10 +40,21 @@ var getSpotify = function(songName) {
     console.log("Album: " + songs[0].album.name);
     console.log("------------------------------------");
   });
+  // append text into log.txt file
+  // var logSpotify =
+  //   "---Spotify---" + "\nArtist" + songs[0].artists.map(getArtist);
+  // //use file system to log if there's an error
+  // fs.appendFile("log.txt", logSpotify, function(err) {
+  //   if (err) throw err;
+  // });
 };
 
 // getMovie function will show what the movie does
 function getMovie(movieName) {
+  if (!movie) {
+    //default will search for Mr. Nobody
+    movie = "Mr.Nobody";
+  }
   // Then run a request with axios to the OMDB API with the movie specified
   axios
     .get(
@@ -65,19 +78,23 @@ function getMovie(movieName) {
 }
 // getConcert function will show what the concert does
 function getConcert(artist) {
+  var artisit = userCommands;
+  var URL =
+    "https://rest.bandsintown.com/artists/" +
+    artist +
+    "/events?app_id=codingbootcamp";
   axios
-    .get(
-      "https://rest.bandsintown.com/artists/" +
-        artist +
-        "/events?app_id=codingbootcamp"
-    )
+    .get(URL)
     .then(function(response) {
+      // console.log(response);
       console.log("------------------------------------");
-      console.log("Venue: " + response.data.venue.name);
-      console.log("Location: " + response.data.venue.country);
+      console.log("Venue: " + response.data[0].venue.name);
+      console.log("Location: " + response.data[0].venue.city);
       //using moment to format date (mm/dd/yyyy)
-      let concertDate = moment(response.data.datetime).format("MM/DD/YYYY");
-      console.log("Date and Time:" + response.data.eventData.datetime);
+      console.log(
+        "Date and Time:" +
+          moment(response.data[0].venue.datetime).format("mm/dd/yyyy")
+      );
       console.log("------------------------------------");
     })
     .catch(function(error) {
