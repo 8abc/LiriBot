@@ -31,3 +31,7 @@ do-what-it-says | uses the built in readFile() method to access data from a .txt
 
 4. do-what-it-says
 <img width="463" alt="image4" src="https://user-images.githubusercontent.com/46228172/57966753-03fca180-790b-11e9-9c78-aa9f360f75a3.png">
+
+5. log.txt 
+Bonus: Logs the data from you terminal and outputs the data to .txt file
+<img width="815" alt="Screen Shot 2019-06-10 at 8 35 48 PM" src="https://user-images.githubusercontent.com/46228172/59242785-d3362200-8bc1-11e9-891c-25ed24fce8fb.png">
